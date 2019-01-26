@@ -31,8 +31,10 @@ if (message.content.startsWith(prefix + 'setname')) {
 } 
 
 if (message.content.startsWith(prefix + 'setavatar')) {
-  client.user.setAvatar(argresult);
-   message.channel.sendMessage(`Avatar Changed Successfully To **${argresult}**`);
+if (message.author.id !== '538027343671984148') return message.reply('** هذا الأمر فقط لصاحب البوت و شكراًً **')
+client.user.setAvatar(argresult);
+ message.channel.sendMessage(`**${argresult}** : تم تغ��ر صورة البوت`);
+} else
 }
 
 if (message.content.startsWith(prefix + 'setT')) {
